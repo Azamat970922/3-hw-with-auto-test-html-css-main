@@ -153,6 +153,7 @@ form {
     font-weight: 700;
     font-size: 14px;
     color: #fff;
+    transition-duration: 1s;
 }
 
 .btn:hover {
@@ -189,5 +190,8 @@ footer {
 }
 
 .footer-link:hover {
+    width: 100px;
+    height: 100px;
+    transition-duration: 2s;
     /* 📍 Стили для ссылки при наведении курсора */
 }
