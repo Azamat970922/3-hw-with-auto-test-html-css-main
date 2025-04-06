@@ -4,7 +4,14 @@
     box-sizing: border-box;
 }
 
-
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
     /* 📍 Максимальная ширина для контейнера */
 
 
@@ -27,15 +34,22 @@ header span {
 .main-section {
     background-color: #fafaff;
     padding: 60px 0;
-    min-height: 100vh;
+    min-height: 100vh;   
+     
     /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
 }
-
+ 
 .main-section .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
 }
 
 .text-wrapper {
+    width: 425px;
+    height: 180px;
+    
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
 }
 
@@ -60,6 +74,12 @@ header span {
 }
 
 .about-section .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px;
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
 }
 
@@ -67,7 +87,7 @@ select {
     border: 1px solid rgba(48, 48, 48, 0.3);
     border-radius: 5px;
     width: 150px;
-    padding: 8px 12px;
+    padding: 10px 12px;
     font-weight: 400;
     font-size: 16px;
     appearance: none; 
@@ -78,11 +98,17 @@ select {
 
 select:hover,
 .text-field:hover {
+    border-color: #2965F1;
     /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
 }
 
 
 .info-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 146px;
+    justify-content: space-between;
+    padding: 100px 0;
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
 }
 
@@ -99,6 +125,13 @@ select:hover,
 
 .frameworks-list,
 .books-list {
+    display: flex;
+    flex-direction: column; 
+    gap: 14px;
+    padding: 0; 
+    margin: 0; 
+    
+    
     /* 📍 Свойства flexbox для отступов между элементами в списках */
 }
 
@@ -110,14 +143,22 @@ select:hover,
 }
 
 .skills-block {
+    display: flex;
+    flex-direction: column;
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
 }
 
 .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 1;
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
 }
 
 .books-list {
+    width: 570px;
+    height: 162px;
     font-weight: 400;
     font-size: 16px;
     padding-left: 20px;
@@ -130,6 +171,8 @@ select:hover,
 
 form {
     margin-bottom: 40px;
+    width: 465px;
+    height: 36px;
 }
 
 .text-field {
@@ -153,10 +196,13 @@ form {
     font-weight: 700;
     font-size: 14px;
     color: #fff;
-    transition-duration: 1s;
+    position: absolute;
+    margin: 0 10px;
 }
 
 .btn:hover {
+    background-color: #2979f1;
+    cursor: pointer;
     /* 📍 Стили для кнопки при наведении курсора */
 }
 
@@ -179,6 +225,7 @@ th, td {
 footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
+    text-align: center;
     /* 📍 Свойство для расположения ссылки горизонтально по центру */
 }
 
@@ -190,8 +237,10 @@ footer {
 }
 
 .footer-link:hover {
+    text-align: center;
     width: 100px;
     height: 100px;
     transition-duration: 2s;
+    text-decoration: underline;
     /* 📍 Стили для ссылки при наведении курсора */
 }
