@@ -7,7 +7,7 @@
 .container {
     height: 100%;
     width: 100%;
-    max-width: 1170px;
+    max-width: 1140px;
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
@@ -43,12 +43,15 @@ header span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 60px;
     /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
 }
 
 .text-wrapper {
     width: 425px;
     height: 180px;
+    max-width: 425px;
+    gap: 60px;
     
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
 }
@@ -80,6 +83,7 @@ header span {
     flex-direction: column;
     padding: 15px;
     border: 1px;
+    gap: 60px;
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
 }
 
@@ -106,7 +110,7 @@ select:hover,
 .info-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 146px;
+    gap: 60px;
     justify-content: space-between;
     padding: 100px 0;
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
@@ -127,7 +131,7 @@ select:hover,
 .books-list {
     display: flex;
     flex-direction: column; 
-    gap: 14px;
+    gap: 16px;
     padding: 0; 
     margin: 0; 
     
@@ -140,11 +144,12 @@ select:hover,
     font-size: 16px;
     list-style-image: url(./solar_map-arrow-up-bold.svg);
     padding-left: 20px;
+
 }
 
 .skills-block {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
 }
 
@@ -152,7 +157,7 @@ select:hover,
     display: flex;
     flex-direction: column;
     gap: 20px;
-    order: 1;
+
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
 }
 
